@@ -3,9 +3,9 @@ require_once 'db.php';
 
 if(isset($_POST['insertData'])) {
     $name = $_POST['name'];
-    $email = $_POST['email'];
+    $phonenumber = $_POST['phonenumber'];
 
     $db = new DB();
-    $db->insertData($name, $email);
+    $db->insertData($name, $phonenumber);
     header('Location: index.php');
 }
