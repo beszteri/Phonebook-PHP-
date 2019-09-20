@@ -36,4 +36,10 @@ class DB {
         $stmt->execute(['id' => $id]);
         echo "ID: " . $id . " was deleted";
     }
+
+    public function editData($id, $name) {
+        $sql = "UPDATE userdetails SET name = :name where id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute(['id' => $id, 'name' => $name]);
+    }
 }

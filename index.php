@@ -35,6 +35,13 @@ if(isset($_POST['deleteData'])) {
         <input type="submit" value="Insert" name="deleteData">
     </form>
 
+    <h1>Edit</h1>
+    <form action="editData.php" method="POST">
+        <input type="text" placeholder="Id" name="id">
+        <input type="text" placeholder="Name" name="name">
+        <input type="submit" value="Edit" name="editData">
+    </form>
+
     <h1>Data</h1>
     <?php
         $data = $db->getData();
