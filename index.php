@@ -23,5 +23,14 @@ $db = new DB();
         <input type="submit" value="Insert" name="insertData">
     </form>
 
+    <?php
+        $data = $db->getData();
+        foreach($data as $i) {
+            echo $i['name'] . " - " . $i['email'] . "<br>";
+        }
+
+
+    ?>
+
 </body>
 </html>
