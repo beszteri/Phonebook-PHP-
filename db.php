@@ -29,4 +29,11 @@ class DB {
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
+
+    public function deleteData($id) {
+        $sql = "DELETE FROM userdetails WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute(['id' => $id]);
+        echo "ID: " . $id . " was deleted";
+    }
 }
